@@ -1,0 +1,24 @@
+name: localhost-rzucanetnt
+version: '${version}'
+
+main: pl.localhost.rzucanetnt.Main
+api-version: '1.20'
+load: POSTWORLD
+
+authors: [ Localhost ]
+website:
+  discord: localhost_127001
+
+commands:
+  rzucanetnt:
+    aliases: [rtnt, throwtnt]
+    description: Glowna komenda systemu rzucanego TNT
+    permission: rzucanetnt.use
+
+permissions:
+  rzucanetnt.use:
+    description: Pozwala na rzucanie TNT oraz sprawdzanie receptury
+    default: true
+  rzucanetnt.admin:
+    description: Pozwala na nadawanie rzucanego TNT i przeladowanie konfiguracji
+    default: op

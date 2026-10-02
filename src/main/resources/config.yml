@@ -1,0 +1,84 @@
+# ==============================================================
+#                 localhost-rzucanetnt - Konfiguracja
+#       Autor: Localhost (discord: localhost_127001)
+# ==============================================================
+
+settings:
+  # Czas odnowienia (w sekundach) miedzy rzutami
+  cooldown: 5
+
+  # Czas zapalnika (w tickach; 20 tickow = 1 sekunda, 35 tickow = 1.75s)
+  fuse-ticks: 35
+
+  # Mnoznik predkosci lotu przy rzucie
+  velocity-multiplier: 1.4
+
+  # Pionowe uniesienie (kat) przy rzucie
+  upward-lift: 0.2
+
+  # Sila eksplozji (standardowe TNT w wanilii = 4.0)
+  explosion-power: 4.0
+
+  # Czy wybuch ma niszczyc bloki bedace w wodzie / zalane woda
+  break-water-blocks: true
+
+  # Szansa procentowa (0.0 - 100.0) na zniszczenie blokow obsydianu w promieniu wybuchu
+  obsidian-break-chance: 25.0
+
+  # Czy powiadomienia o cooldownie maja sie pokazywac na ActionBarze gdy gracz trzyma rzucane TNT
+  actionbar-enabled: true
+
+  # Czy ladunek ma zostawiac slad z czasteczek podczas lotu
+  particle-trail: true
+  trail-particle: "FLAME"
+
+  # Dźwięk przy wyrzucie
+  launch-sound: "ENTITY_FIREWORK_ROCKET_LAUNCH"
+
+# Przedmiot Rzucanego TNT
+item:
+  material: "TNT"
+  custom-model-data: 201
+  name: "&c&lRzucane TNT"
+  lore:
+    - "&7Rzadkość: &cMityczny"
+    - ""
+    - "&7Działanie (&ePPM&7):"
+    - "&8» &7Wyrzuca zapalony ładunek wybuchowy!"
+    - "&8» &7Wybucha po &c1.75 sekundy &7od wyrzutu."
+    - "&8» &7Posiada &c25% &7szansy na zniszczenie obsydianu!"
+    - ""
+    - "&cCooldown: &f%cooldown%s"
+    - "&eKliknij Prawym Przyciskiem Myszy, aby rzucić."
+
+# Receptura Craftingu
+crafting:
+  enabled: true
+  result-amount: 1
+  shape:
+    - "GTG"
+    - "TFT"
+    - "GTG"
+  ingredients:
+    G: "GUNPOWDER"
+    T: "TNT"
+    F: "FIRE_CHARGE"
+
+# Komunikaty
+messages:
+  prefix: "&8[&cRzucaneTNT&8] &7"
+  no-permission: "&cNie posiadasz uprawnień do tej czynności!"
+  player-only: "&cTa komenda może być wykonana wyłącznie przez gracza!"
+  cooldown: "&cMusisz odczekać jeszcze &e%time%s &cprzed kolejnym rzutem!"
+  thrown: "&cWyrzucono &4Rzucane TNT&c!"
+  given-sender: "&aPomyślnie nadano &ex%amount% Rzucanego TNT &adla gracza &e%player%&a!"
+  given-target: "&aOtrzymałeś &ex%amount% Rzucanego TNT&a!"
+  inventory-full: "&cTwój ekwipunek jest pełny! Przedmioty wypadły na ziemię."
+  player-not-found: "&cPodany gracz jest offline!"
+  invalid-number: "&cPodana ilość musi być liczbą całkowitą od 1 do 64!"
+  reload: "&aKonfiguracja rzucanego TNT została pomyślnie przeładowana!"
+  usage: "&7Użycie: &e/rzucanetnt [receptura|daj|reload]"
+  usage-give: "&7Użycie: &e/rzucanetnt daj <gracz> [ilość]"
+  recipe-info: "&7Receptura: &f4x Proch, 4x TNT oraz 1x Kula Ognia (Fire Charge) w środku craftingu!"
+  actionbar-cooldown: "&cRzucane TNT: Odnawianie (%time%s)"
+  actionbar-ready: "&aRzucane TNT: Gotowe do rzutu!"
